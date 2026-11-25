@@ -1,0 +1,303 @@
+
+/* OSNOVNA PODESAVANJA */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111318;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* NAVIGACIJA */
+
+header {
+    background-color: #191c22;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #292d35;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #dddddd;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}
+
+
+/* POCETNA SEKCIJA */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitle {
+    color: #e63946;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.subtitle) {
+    color: #dddddd;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e63946;
+    padding: 13px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #bd2633;
+}
+
+
+/* ZAJEDNICKE SEKCIJE */
+
+.section {
+    padding: 90px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:not(.subtitle) {
+    color: #b8bbc2;
+}
+
+
+/* O NAMA */
+
+.about {
+    background-color: #191c22;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #c3c5ca;
+    margin-bottom: 18px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+
+/* USLUGE */
+
+.services {
+    background-color: #111318;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background-color: #1c2028;
+    padding: 35px 25px;
+    border-radius: 8px;
+    border: 1px solid #292e38;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #e63946;
+}
+
+.service-icon {
+    font-size: 30px;
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #b8bbc2;
+}
+
+
+/* KONTAKT */
+
+.contact {
+    background-color: #191c22;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.contact-item {
+    background-color: #222630;
+    padding: 30px 15px;
+    border-radius: 8px;
+}
+
+.contact-item h3 {
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    color: #dddddd;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #0b0d11;
+    text-align: center;
+    padding: 30px;
+    color: #999da6;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE DIZAJN */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .section {
+        padding: 65px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
